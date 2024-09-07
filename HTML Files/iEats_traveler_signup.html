@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>International Eats | Traveler SignUp</title>
+        <!-- <link href = "./iEats_traveler_style.css" rel = "stylesheet"> -->
+
+        <meta charset = "UTF-8">
+
+        <!-- icon fonts stylesheet -->
+        <link rel="stylesheet" href = "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    </head>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            background-color: #e2f5eb;
+            font-family: "Abel"; 
+        }
+
+        .footer {
+            /* position: fixed; */
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #e2f5eb;
+            color: black;
+            text-align: center;
+        }
+
+        /* input fields */
+        .signup-input {
+            border: none;
+            border-bottom: 2px solid #93e089;
+            width: 100%;
+            padding: 15px;
+            padding: 24px;
+            font-weight: bold;
+            transition: .2s;
+            margin: 5px 0 22px 0;
+            display: inline-block;
+            border: none;
+            background: none;
+            font-family: "Abel";
+            color: black;
+        }
+
+        .signup-input:focus, .signup-input:active, .signup-input:hover {
+            background-color: white;
+            outline: none;
+            color: black;
+            border-bottom-color: #3f7744;
+        }
+
+        .signup-modal-content hr {
+            border: 1px solid #7fbfe4;
+            margin-bottom: 25px;
+        }
+
+        /* style for buttons */
+        .signup-submit {
+            background-color: #97a09c;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 25%;
+            opacity: 0.9;
+        }
+
+        .signup-submit:hover {
+            opacity: 3;
+        }
+
+        .signup-submit {
+            float: left;
+            width: 100%;
+        }
+
+        .main-inteats {
+            position: relative;
+        }
+
+        .main-inteats span {
+            position: relative;
+            display: inline-block;
+            font-size: 40px;
+            font-weight: 700;
+            color: #3f7744;
+            text-transform: uppercase;
+            animation: flip 2s infinite;
+            animation-delay: calc(.2s * var(--i))
+        }
+
+        @keyframes flip {
+            0%, 80% {
+                transform: rotateY(360deg)
+            }
+        }
+
+        /* add padding the container elements */
+        .signup-container-form {
+            padding: 16px;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        /* modal content box */
+        .modal-content-signup {
+            z-index: 1;
+            background-color: #b1e1f0fa;
+            /* 15% from the top and centered */
+            margin: 5px auto;
+            border: 1px solid #97dce6;
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .main-img {
+            border-radius: 400px;
+            width: 200px;
+            height: 200px;
+        }
+
+        /* clear the floats */
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        /* change the styles for the cancel button and the signup button on extra small screens */
+        @media screen and (max-width: 300px) {
+            .cancel-btn, .signup-submit {
+                width: 100%;
+            }
+        }
+
+        /* for the login */
+        @media screen and (max-width: 300px) {
+            .cancel-btn, .login-submit {
+                width: 100%;
+            }
+        }
+
+        /* background of the modal */
+        .modal-signup {
+            /* position: fixed; */
+            z-index: 1;
+            /* left: 25%; */
+            /* top: 5%; */
+            width: 80%;
+            height: 70%;
+            border-radius: 10px;
+            margin: auto;
+            /* scroll enabled if needed */
+            overflow: auto;
+            background-color: #7fbfe4;
+            padding-top: 60px;
+        }
+
+        #button-icon-signup {
+            color: #3f7744;
+            font-size: 25px;
+        }
+
+        .carousel-img {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            height: 15vh;
+        }
+
+        /* to have the styling for the image classes to work, you must first call the further outside
+        container and then the actual class of the images */
+        .carousel-img .carousel-image {
+            margin: 0 auto;
+            width: 80px;
+            height: 80px;
+            border-radius: 50px;
+            display: flex;
+        }
+
+        .carousel-img-slider {
+            height: 110px;
+            margin: auto;
+            overflow: hidden;
+            position: relative;
+            width: 80%;
+        }
+
+        .carousel-img-slider .carousel-img-slide-track {
+            animation: scroll 200s linear infinite;
+            display: flex;
+            animation-iteration-count: infinite; /* ensures an infinite loop */
+        }
+
+        .carousel-img-slider .img {
+            height: 80px;
+            width: 80px;
+            margin-right: 10px;
+        }
+
+        @-webkit-keyframes scroll {
+            0% {
+                transform: translateX(0);
+            } 100% {
+                transform: translateX(calc(-250px * 7));
+            }
+        }
+
+        @keyframes scoll {
+            0% {
+                transform: translateX(0);
+            } 100% {
+                transform: translateX(calc(-250px * 7));
+            } 100.1% { /* adds a kayeframe immediately after the last image */
+                transform: translateX(0); /* resets the translation back to the initial position */
+            }
+        }
+
+        .new-traveler-title {
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        .signup-submit {
+            background-color: #3f7744;
+        }
+
+    </style>
+
+    <body>
+
+        <br><br>
+
+        <!-- earth rotation picture -->
+        <div style = "text-align: center;">
+            <img src = "./images/earth_rotate.gif" class = "main-img">
+        </div>
+
+        <br><br>
+
+        <div class = "main-inteats" style = "text-align: center;">
+            <span style = "--i:1">I</span>
+            <span style = "--i:2">n</span>
+            <span style = "--i:3">t</span>
+            <span style = "--i:4">e</span>
+            <span style = "--i:5">r</span>
+            <span style = "--i:6">n</span>
+            <span style = "--i:6">a</span>
+            <span style = "--i:7">t</span>
+            <span style = "--i:8">i</span>
+            <span style = "--i:9">o</span>
+            <span style = "--i:10">n</span>
+            <span style = "--i:11">a</span>
+            <span style = "--i:12">l</span>
+            <span style = "--i:13">E</span>
+            <span style = "--i:14">a</span>
+            <span style = "--i:15">t</span>
+            <span style = "--i:16">s</span>
+            <span style = "--i:17">.</span>
+        </div>
+
+        <br><br>
+
+        <!-- the signup modal -->
+        <div id = "id01" class = "modal-signup">
+            <div class = "signup-container-form">
+                <div class = "modal-content-signup">
+                    <!-- content in the modal -->
+                    <!-- <form class = "signup-modal-content" action = "register.php" method = "post"> -->
+                        <form class = "signup-modal-content" action = "register_process.php" method = "post" novalidate>
+                        <br>
+                        <!-- image container -->
+                        <div class = "carousel-img" style = "text-align: center;">
+                            <div class = "carousel-img-slider">
+                                <div class = "carousel-img-slide-track">
+                                    <div class = "img">
+                                        <img src = "./images/broccoli_gif.gif" class = "carousel-image">
+                                    </div>
+                                    <div class = "img">
+                                        <img src = "./images/food1.gif" class = "carousel-image">
+                                    </div>
+                                    <div class = "img">
+                                        <img src = "./images/food2.gif" class = "carousel-image">
+                                    </div>
+                                    <div class = "img">
+                                        <img src = "./images/food3.gif" class = "carousel-image">
+                                    </div>
+                                    <div class = "img">
+                                        <img src = "./images/food4.gif" class = "carousel-image">
+                                    </div>
+                                    <div class = "img">
+                                        <img src = "./images/food5.gif" class = "carousel-image">
+                                    </div>
+                                    <div class = "img">
+                                        <img src = "./images/food6.gif" class = "carousel-image">
+                                    </div>
+                                    <div class = "img">
+                                        <img src = "./images/food7.gif" class = "carousel-image">
+                                    </div>
+                                    <div class = "img">
+                                        <img src = "./images/food8.gif" class = "carousel-image">
+                                    </div>
+                                    <div class = "img">
+                                        <img src = "./images/food9.gif" class = "carousel-image">
+                                    </div>
+                                    <div class = "img">
+                                        <img src = "./images/food10.gif" class = "carousel-image">
+                                    </div>
+                                    <div class = "img">
+                                        <img src = "./images/food11.gif" class = "carousel-image">
+                                    </div>
+                                    <div class = "img">
+                                        <img src = "./images/food12.gif" class = "carousel-image">
+                                    </div>
+                                    <div class = "img">
+                                        <img src = "./images/food13.gif" class = "carousel-image">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- image slideshow container ends -->
+                        <br>
+
+                        <div class = "new-traveler-title">
+                            <h1>New Traveler</h1>
+                        </div>
+                        <br>
+                        <p style = "text-align: center;">Please fill in this form to create an account with <b>International Eats.</b></p>
+                        <hr>
+
+                        <div class = "signup-field">
+                            <i id = "button-icon-signup" class = "bi bi-envelope-at-fill"></i>
+                            <label for = "email"><b>Email</b></label>
+                            <input type = "email" class = "signup-input" placeholder = "Enter Email" name = "email"> <!-- required -->
+                        </div>
+
+                        <div class = "signup-field">
+                            <i id = "button-icon-signup" class = "bi bi-person-badge-fill"></i>
+                            <label for = "username"><b>Username</b></label>
+                            <input type = "text" class = "signup-input" placeholder = "Enter Username" name = "uname"> <!-- required -->
+                        </div>
+
+                        <div class = "signup-field">
+                            <i id = "button-icon-signup" class = "bi bi-person-fill"></i>
+                            <label for = "fname"><b>First Name</b></label>
+                            <input type = "text" class = "signup-input" placeholder = "Enter First Name" name = "fname">
+                        </div>
+
+                        <div class = "signup-field">
+                            <i id = "button-icon-signup" class = "bi bi-person-fill"></i>
+                            <label for = "lname"><b>Last Name</b></label>
+                            <input type = "text" class = "signup-input" placeholder = "Enter Last Name" name = "lname">
+                        </div>
+
+                        <div class = "signup-field">
+                            <i id = "button-icon-signup" class = "bi bi-lock-fill"></i>
+                            <label for = "pass"><b>Password</b></label>
+                            <input type = "password" minlength = "8" maxlength = "16" class = "signup-input" placeholder = "Enter Password" name = "pass">
+                        </div>
+
+                        <div class = "signup-field">
+                            <i id = "button-icon-signup" class = "bi bi-lock-fill"></i>
+                            <label for = "repass"><b>Re-enter Password</b></label>
+                            <input type = "password" minlength = "8" maxlength = "16" class = "signup-input" placeholder = "Re-enter Password" name = "repass">
+                        </div>
+
+                        <div class = "signup-field">
+                            <i id = "button-icon-signup" class = "bi bi-telephone-fill"></i>
+                            <label for = "pnum"><b>Phone Number</b> ~ Optional</label>
+                            <input type = "tel" class = "signup-input" placeholder = "Enter Phone Number" name = "pnum">
+                        </div>
+
+                        <div class = "signup-field">
+                            <i id = "button-icon-signup" class = "bi bi-star-fill"></i>
+                            <label for = "favfood"><b>Favorite Food</b></label>
+                            <input type = "text" class = "signup-input" placeholder = "Enter Favorite Food" name = "favfood">
+                        </div>
+
+                        <div class = "signup-field">
+                            <label for = "agree-form">
+                                <input type = "checkbox" name = "agree-form" value = "yes" required> I agree with the <a href = "#" title = "terms of services">Terms of Services</a>.
+                            </label>
+        
+                            <br>
+        
+                            <label for = "alerts-signup">
+                                <input type = "checkbox" name = "alerts-signup" value = "alerts-signup"> I agree to sign up for weekly updates about newly added 
+                                information to Destination and Find Your Food.
+                            </label>
+        
+                            <br><br>
+
+                            <!-- signup button -->
+        
+                            <button type = "submit" name = "signup-submit" class = "signup-submit">Sign Up</button>
+
+                            <br><br><br>
+                            
+                            <div style = "text-align: center;">
+                                <br>
+                                <span>Already an Experienced Traveler? <b>Login <a href = "iEats_traveler_login.html"><i style = "color: #4678c4;" class = "bi bi-arrow-right"></i></a></b></span>
+                                <br><br>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <br><br>
+
+        <!-- footer  begins -->
+        <hr>
+        <footer class = "footer">
+            <a href = "iEats_homepage.html"><img src = "./images/iEats_logo.png" width = "35" height = "35"></a><span style = "font-size: medium;">International Eats | &copy; 2024 Copyright</span>
+        </footer>
+        <!-- footer ends -->
+    </body>
+</html>
