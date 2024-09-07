@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    background-color: #e2f5eb;
+    font-family: "Abel"; 
+}
+
+.logo-container {
+    /* puts things in the same row */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-container img {
+    /* space between the image and the text */
+    margin-right: 10px;
+}
+
+.footer {
+    /* position: fixed; */
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #e2f5eb;
+    color: black;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #1dad65;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav li {
+    float: left;
+    border-right: 1px solid #bbb;
+}
+
+nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav li:last-child {
+    border-right: none;
+}
+
+/* change the color to hover */
+nav li a:hover {
+    background-color: #c99cc9;
+}
+
+nav .active {
+    background-color: rgb(30, 88, 35);
+}
+
+.nav-right {
+    float: right;
+    /* margin-left: auto; */
+}
+
+::find your food {
+    background-color: var(#e2f5eb);
+    color: var(#344f99);
+    -webkit-animation-fill-color: var(#344f99);
+}
+
+h1 {
+    color: #c290df;
+    text-align: center;
+}
+
+blockquote {
+    border-left: 5px solid #c290df;
+    margin-left: 1;
+    padding: 1rem 0 1rem 2rem;
+    font-size: 1.2rem;
+    transition: transform .2s;
+}
+
+blockquote:hover, blockquote:active, blockquote:focus {
+    transform: scale(1.1);
+}
+
+p { 
+    margin: 2;
+}
+
+.search-bar-country {
+    padding: 10px 30px 10px 10px;
+    font-size: 16px;
+    font-family: "Abel";
+    border: 1px solid #c290df;
+    border-radius: 26px;
+    /* background-image: url("C:\Users\akiny\OneDrive\Code Files\HTML Files\International Eats\images\search.png"); */
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 20px 20px;
+    /* width: 200px; */
+    width: 50%;
+    box-shadow: 0px 2px 2px #a8d3f0;
+    cursor: pointer;
+    transition: transform .2s;
+}
+
+.search-bar-country:active, .search-bar-country:focus, .search-bar-country:hover {
+    border-color: #e2f5eb;
+    outline: none;
+    transform: scale(1.1);
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-bar {
+    width: 75px;
+    height: 40px;
+    padding-left: 35px;
+}
+
+.search-bar-button {
+    padding: 10px 30px 10px 10px;
+    width: 10%;
+    text-align: center;
+    font-size: 12px;
+    /* height: 30px; */
+    margin: 40px;
+    cursor: pointer;
+    background-color: #c290df;
+    color: #e2f5eb;
+    border-radius: 10px;
+    border-bottom: #c290df;
+    outline: none;
+    box-shadow: 0px 2px 2px #a8d3f0;
+    /* display: none; */
+}
+
+.search-bar-button:active, .search-bar-button:focus, .search-bar-button:hover {
+    border-color: #e2f5eb;
+    outline: none;
+    transform: scale(1.1);
+    opacity: 4;
+}
+
+a {
+    color: inherit;
+}
+
+.intro {
+    font-size: 35px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-decoration: solid #000;
+}
+
+.container-table {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: 10px;
+    padding-left: 0px;
+    padding-right: 10px;
+}
+
+.food-table {
+    li {
+        border-radius: 3px;
+        padding: 25px 30px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 25px;
+    }
+    .food-th {
+        background-color: #1dad65;
+        /* background-color: transparent; */
+        /* border-bottom: 2px solid #000; */
+        font-size: 16px;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+        font-weight: 700;
+        text-align: center;
+    }
+    .food-tr {
+        background-color: #c290df;
+        text-align: center;
+        font-weight: 500;
+        color: #e2f5eb;
+        box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.4);
+    }
+    .food-tr:hover {
+        border-color: #d2df5d;
+        outline: 7px solid #d2df5d;
+    }
+    .col-1 {
+        flex-basis: 25%;
+    }
+    .col-2 {
+        flex-basis: 25%;
+    }
+    .col-3 {
+        flex-basis: 50%;
+    }
+
+    @media all and (max-width: 767px) {
+        .food-th {
+            display: none;
+        }
+        .food-table li {
+            display: block;
+        }
+        .col {
+            flex-basis: 100%;
+        }
+
+        .col {
+            display: flex;
+            padding: 10px 0;
+
+            &::before {
+                color: #000;
+                padding-right: 10px;
+                content: attr(data-label);
+                flex-basis: 50%;
+                text-align: right;
+            }
+        }
+    }
+}
+
+.dis:hover {
+    transform: scale(1.1);
+    color: #1dad65;
+}
+.empty {
+    align-items: center;
+    margin: auto;
+    justify-content: center;
+    border-radius: 25px;
+    margin-left: 50%;
+    width: 55px;
+    height: 55px;
+    /* box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.5); */
+    /* position: relative; */
+}

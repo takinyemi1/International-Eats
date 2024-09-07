@@ -1,0 +1,544 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    background-color: #e2f5eb;
+    font-family: "Abel"; 
+}
+
+.logo-container {
+    /* puts things in the same row */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.intro .welcome {
+    font-size: 100px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.intro .name {
+    font-size: 75px;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.logo-container img {
+    /* space between the image and the text */
+    margin-right: 10px;
+}
+
+.footer {
+    /* position: fixed; */
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #e2f5eb;
+    color: black;
+    text-align: center;
+}
+
+.mainImg {
+    display: inline-block;
+    vertical-align: top;
+    border-radius: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #1dad65;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* ensures the navigation bar stays on top of the information */
+}
+
+nav li {
+    float: left;
+    border-right: 1px solid #bbb;
+}
+
+nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav li:last-child {
+    border-right: none;
+}
+
+/* change the color to hover */
+nav li a:hover {
+    background-color: #c99cc9;
+}
+
+nav .active {
+    background-color: rgb(30, 88, 35);
+}
+
+.nav-right {
+    float: right;
+    /* margin-left: auto; */
+}
+
+/* responsive layout that makes the two columnns stack on top of each other on smaller screens */
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+}
+
+/* about button */
+.about-button {
+    text-align: center;
+    background-color: #303797;
+    font-size: 16px;
+    padding: 16px 20px;
+    border-radius: 26px;
+    border: 1 px solid #99ddb9;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    color: #e2f5eb;
+    box-shadow: 0px 2px 2px #a6d4bc;
+    cursor: pointer;
+    transition: transform .2s;
+}
+
+.about-button:active, .about-button:focus, .about-button:hover {
+    border-color: #e2f5eb;
+    outline: none;
+    transform: scale(1.1);
+}
+
+.about-button a:link {
+    text-decoration: none;
+    color: #e2f5eb;
+}
+
+.about-button a:visited {
+    text-decoration: none;
+    color: #e2f5eb;
+}
+
+.about-button a:active {
+    text-decoration: none;
+    color: #e2f5eb;
+}
+/* about page end */
+
+/* destination page */
+.destination-button {
+    text-align: center;
+    background-color: #1f7764;
+    font-size: 16px;
+    padding: 16px 20px;
+    border-radius: 26px;
+    border: 1 px solid #99ddb9;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    color: #e2f5eb;
+    box-shadow: 0px 2px 2px #a6d4bc;
+    cursor: pointer;
+    transition: transform .2s;
+}
+
+.destination-button:active, .destination-button:focus, .destination-button:hover {
+    border-color: #e2f5eb;
+    outline: none;
+    transform: scale(1.1);
+}
+
+.destination-button a:link {
+    text-decoration: none;
+    color: #e2f5eb;
+}
+
+.destination-button a:visited {
+    text-decoration: none;
+    color: #e2f5eb;
+}
+
+.destination-button a:active {
+    text-decoration: none;
+    color: #e2f5eb;
+}
+
+/* destination page end */
+
+/* find food page */
+.find-food-button {
+    text-align: center;
+    background-color: #853088;
+    font-size: 16px;
+    padding: 16px 20px;
+    border-radius: 26px;
+    border: 1 px solid #99ddb9;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    color: #e2f5eb;
+    box-shadow: 0px 2px 2px #e2f5eb;
+    cursor: pointer;
+    transition: transform .2s;
+}
+
+.find-food-button:active, .find-food-button:focus, .find-food-button:hover {
+    border-color: #e2f5eb;
+    outline: none;
+    transform: scale(1.1);
+}
+
+.find-food-button a:link {
+    text-decoration: none;
+    color: #e2f5eb;
+}
+
+.find-food-button a:visited {
+    text-decoration: none;
+    color: #e2f5eb;
+}
+
+.find-food-button a:active {
+    text-decoration: none;
+    color: #e2f5eb;
+}
+
+/* find food page end */
+
+/* new traveler card */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #e2f5eb;
+    padding-left: 10px;
+    /* position: relative; */
+    margin-top: 5px;
+    /* margin: 0; */
+}
+
+.container {
+
+    .new-traveler-card  {
+        width: 450px;
+        height: 600px;
+        background-color: #79d394;
+        border-radius: 20px;
+        overflow: hidden;
+        padding-left: 8px;
+        padding-right: 8px;
+        margin-right: 10px;  /* adds a margin between the two cards */
+        position: relative;
+    }
+
+    .new-traveler-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #303797;
+        clip-path: circle(150px at 80% 20%);
+        transition: 0.5s ease-in-out;
+    }
+
+    .new-traveler-card:hover::before {
+        clip-path: circle(300px at 80% -20%);
+    }
+
+    .new-traveler-card::after {
+        content: "New Traveler?";
+        position: absolute;
+        top: 30%;
+        left: 0;
+        font-size: 6em;
+        font-weight: 800;
+        font-style: italic;
+        color: rgba(54, 37, 209, 0.144);
+    }
+
+    .new-traveler-card .new-traveler-card-image {
+        position: absolute;
+        top: 30%;
+        transform: translate(30%, -50%); /* to have it in the middle */
+        z-index: 10;
+        width: 60%;
+        height: 50%;
+        transition: 0.5s;
+        margin: auto;
+    }
+
+    .new-traveler-card:hover .new-traveler-card-image {
+        top: 0%;
+        transform: translateY(0%);
+    }
+
+    .new-traveler-card .new-traveler-card-content-box {
+        position: absolute;
+        bottom: 0;
+        width: 90%;
+        height: 100%;
+        text-align: center;
+        transition: 1s;
+        z-index: 10;
+    }
+
+    .new-traveler-card:hover .new-traveler-card-content-box {
+        height: 320px;
+    }
+
+    .new-traveler-card .new-traveler-card-content-box h2 {
+        position: relative;
+        font-weight: 600;
+        letter-spacing: 1px;
+        color: #000;
+        /* margin: 0; */
+    }
+
+    .new-traveler-card .new-traveler-card-content-box {
+        /* display: flex; */
+        justify-content: center;
+        align-items: center;
+        padding: 8px 20px;
+        transition: 0.5s; 
+        opacity: 0;
+        visibility: hidden;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .new-traveler-card:hover .new-traveler-card-content-box {
+        opacity: 1;
+        visibility: visible;
+        transition-delay: 0.5s;
+    }
+
+    .new-traveler-card .new-traveler-card-content-box h4 {
+        color: #000;
+        font-weight: 300;
+        font-size: 14px;
+        /* text-transform: uppercase; */
+        letter-spacing: 2px;
+        /* margin-right: 10px; */
+    }
+
+    .new-traveler-card {
+        cursor: pointer;
+    }
+
+    .new-traveler-card .new-traveler-card-title {
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    /* new traveler end */
+    
+    /* experienced traveler */
+    .experienced-traveler-card {
+        width: 450px;
+        height: 850px;
+        background-color: #79a8d3;
+        border-radius: 20px;
+        overflow: hidden;
+        padding-left: 8px;
+        padding-right: 8px;
+        margin: 10px; /* adds a margin between the two cards */
+        position: relative;
+    }
+
+    .experienced-traveler-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        /* background: linear-gradient(to botton, #1f7764, #853088); */
+        background-color: #1f7764;
+        clip-path: circle(150px at 80% 20%);
+        transition: 0.5s ease-in-out;
+    }
+
+    .experienced-traveler-card:hover::before {
+        clip-path: circle(300px at 80% -20%);
+    }
+
+    .experienced-traveler-card::after {
+        content: "Experienced Traveler?";
+        position: absolute;
+        top: 30%;
+        left: 0;
+        font-size: 6em;
+        font-weight: 800;
+        font-style: italic;
+        color: rgba(207, 45, 180, 0.144);
+    }
+
+    .experienced-traveler-card .experienced-traveler-card-image {
+        position: absolute;
+        top: 30%;
+        transform: translate(30%, -50%); /* to have it in the middle */
+        z-index: 10;
+        width: 60%;
+        height: 40%;
+        transition: 0.5s;
+        margin: auto;
+    }
+
+    .experienced-traveler-card:hover .experienced-traveler-card-image {
+        top: 0%;
+        transform: translateY(0%);
+    }
+
+    .experienced-traveler-card .experienced-traveler-card-content-box {
+        position: absolute;
+        bottom: 20%;
+        /* top: 40%; */
+        width: 90%;
+        height: 200%;
+        text-align: center;
+        transition: 1s;
+        z-index: 10;
+    }
+
+    .experienced-traveler-card:hover .experienced-traveler-card-content-box {
+        height: 320px;
+    }
+
+    .experienced-traveler-card .experienced-traveler-card-content-box h2 {
+        position: relative;
+        font-weight: 600;
+        letter-spacing: 1px;
+        color: #000;
+        /* margin: 0; */
+    }
+
+    .experienced-traveler-card .experienced-traveler-card-content-box {
+        /* display: flex; */
+        justify-content: center;
+        align-items: center;
+        padding: 8px 20px;
+        transition: 0.5s; 
+        opacity: 0;
+        visibility: hidden;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .experienced-traveler-card:hover .experienced-traveler-card-content-box {
+        opacity: 1;
+        visibility: visible;
+        transition-delay: 0.5s;
+    }
+
+    .experienced-traveler-card .experienced-traveler-card-content-box h4 {
+        color: #000;
+        font-weight: 300;
+        font-size: 14px;
+        /* text-transform: uppercase; */
+        letter-spacing: 2px;
+        /* margin-right: 10px; */
+    }
+
+    .experienced-traveler-card {
+        cursor: pointer;
+    }
+
+    .experienced-traveler-card .experienced-traveler-card-title {
+        text-transform: uppercase;
+        text-align: center;
+    }
+}
+
+.text-danger {
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.text-success {
+    padding: 20px;
+    background-color: #63b354;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+/* close button */
+.close-btn {
+    margin-left: 15px;
+    color: white;
+    font-weight: 700;
+    float: right;
+    font-size: 15px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.close-btn:hover {
+    color: black;
+}
+
+/* loading spinner style */
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading-spinner {
+    border: 8px solid #8f8f8f;
+    border-top: 8px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,449 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    background-color: #e2f5eb;
+    font-family: "Abel"; 
+}
+
+.logo-container {
+    /* puts things in the same row */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-container img {
+    /* space between the image and the text */
+    margin-right: 10px;
+}
+
+.footer {
+    /* position: fixed; */
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #e2f5eb;
+    color: black;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #1dad65;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav li {
+    float: left;
+    border-right: 1px solid #bbb;
+}
+
+nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav li:last-child {
+    border-right: none;
+}
+
+/* change the color to hover */
+nav li a:hover {
+    background-color: #c99cc9;
+}
+
+nav .active {
+    background-color: rgb(30, 88, 35);
+}
+
+.nav-right {
+    float: right;
+    /* margin-left: auto; */
+}
+
+.admin-words {
+    display: block;
+    text-align: center;
+    margin: auto;
+    color: black;
+    font: 700 normal 2.5em "Abel";
+    text-shadow: 3px 2px rgb(235, 232, 99), 2px 3px rgb(235, 232, 99), 2px 2px rgb(235, 232, 99);
+}
+
+.insert-words {
+    display: block;
+    text-align: center;
+    margin: auto;
+    color: black;
+    font: 600 normal 2.0em "Abel";
+    text-shadow: 3px 2px rgb(235, 232, 99), 2px 3px rgb(235, 232, 99), 2px 2px rgb(235, 232, 99);
+}
+
+.update-words {
+    display: block;
+    text-align: center;
+    margin: auto;
+    color: black;
+    font: 600 normal 2.0em "Abel";
+    text-shadow: 3px 2px rgb(235, 232, 99), 2px 3px rgb(235, 232, 99), 2px 2px rgb(235, 232, 99);
+}
+
+.delete-words {
+    display: block;
+    text-align: center;
+    margin: auto;
+    color: black;
+    font: 600 normal 2.0em "Abel";
+    text-shadow: 3px 2px rgb(235, 232, 99), 2px 3px rgb(235, 232, 99), 2px 2px rgb(235, 232, 99);
+}
+
+.admin-banner {
+    text-align: center;
+}
+
+.admin-banner img {
+    /* ensures the margin works */
+    display: block;
+    width: 400px;
+    height: 400px;
+    text-align: center;
+    margin: auto;
+    border-radius: 250px;
+    border: 3px solid #63b354;
+}
+
+.button-organization {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-information {
+    display: block;
+    background-color: #ddc173;
+    width: 80%;
+    text-align: center;
+    margin: auto;
+    box-shadow: 5px 2px rgb(110, 235, 99), 2px 5px rgb(99, 226, 235), 2px 5px rgb(235, 232, 99);
+    border-radius: 12px;
+}
+
+/* traveler */
+.traveler-button {
+    display: block;
+    margin: auto;
+    text-align: center;
+    background-color: #c78b63;
+    font-size: 16px;
+    padding: 16px 20px;
+    border-radius: 26px;
+    border: 1 px solid #753a09;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    color: #e2e3f5;
+    box-shadow: 0px 2px 2px #d4bca1;
+    cursor: pointer;
+    transition: transform .2s;
+
+}
+
+.traveler-button:active, .traveler-button:focus, .traveler-button:hover {
+    border-color: #e2f5eb;
+    outline: none;
+    transform: scale(1.1);
+}
+
+/* edit profile */
+.edit-profile-button {
+    display: block;
+    margin: auto;
+    text-align: center;
+    background-color: #5b962c;
+    font-size: 16px;
+    padding: 16px 20px;
+    border-radius: 26px;
+    border: 1 px solid #45976c;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    color: #e2f5eb;
+    box-shadow: 0px 2px 2px #85aacc;
+    cursor: pointer;
+    transition: transform .2s;
+
+}
+
+.edit-profile-button:active, .edit-profle-button:focus, .edit-profile-button:hover {
+    border-color: #e2f5eb;
+    outline: none;
+    transform: scale(1.1);
+}
+
+/* destination */
+.destination-button {
+    display: block;
+    margin: auto;
+    text-align: center;
+    background-color: #6a63c7;
+    font-size: 16px;
+    padding: 16px 20px;
+    border-radius: 26px;
+    border: 1 px solid #9c90b3;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    color: #e2e3f5;
+    box-shadow: 0px 2px 2px #c086e7;
+    cursor: pointer;
+    transition: transform .2s;
+
+}
+
+.destination-button:active, .destination-button:focus, .destination-button:hover {
+    border-color: #e2f5eb;
+    outline: none;
+    transform: scale(1.1);
+}
+
+.destination-button:active, .destination-button:focus, .destination-button:hover {
+    border-color: #8ae7e7;
+    outline: none;
+    transform: scale(1.1);
+}
+
+.destination-button a:link {
+    text-decoration: none;
+    color: #e2f5eb;
+}
+
+.destination-button a:visited {
+    text-decoration: none;
+    color: #e2f5eb;
+}
+
+.destination-button a:active {
+    text-decoration: none;
+    color: #e2f5eb;
+}
+
+/* find your food */
+.findYourFood-button {
+    display: block;
+    margin: auto;
+    text-align: center;
+    background-color: #3dc2cc;
+    font-size: 16px;
+    padding: 16px 20px;
+    border-radius: 26px;
+    border: 1 px solid #8ae796;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    color: #e2e3f5;
+    box-shadow: 0px 2px 2px #3991a7;
+    cursor: pointer;
+    transition: transform .2s;
+
+}
+
+.findYourFood-button:active, .findYourFood-button:focus, .findYourFood-button:hover {
+    border-color: #e2f5eb;
+    outline: none;
+    transform: scale(1.1);
+}
+
+.findYourFood-button a:link {
+    text-decoration: none;
+    color: #e2f5eb;
+}
+
+.findYourFood-button a:visited {
+    text-decoration: none;
+    color: #e2f5eb;
+}
+
+.findYourFood-button a:active {
+    text-decoration: none;
+    color: #e2f5eb;
+}
+
+.logout-button {
+    display: block;
+    margin: auto;
+    text-align: center;
+    background-color: #38898f;
+    font-size: 16px;
+    padding: 16px 20px;
+    border-radius: 26px;
+    border: 1 px solid #8ae796;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    color: #e2e3f5;
+    box-shadow: 0px 2px 2px #bbdf1c;
+    cursor: pointer;
+    transition: transform .2s;
+}
+
+.logout-button:active, .logout-button:focus, .logout-button:hover {
+    border-color: #e2f5eb;
+    outline: none;
+    transform: scale(1.1);
+}
+
+.logout-button a:link {
+    text-decoration: none;
+    color: #e2f5eb;
+}
+
+.logout-button a:visited {
+    text-decoration: none;
+    color: #e2f5eb;
+}
+
+.logout-button a:active {
+    text-decoration: none;
+    color: #e2f5eb;
+}
+
+.profile-information-title {
+    font-weight: 600;
+    font-size: 25px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.profile-information p {
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.label {
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.text-danger {
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.text-success {
+    padding: 20px;
+    background-color: #63b354;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+/* close button */
+.close-btn {
+    margin-left: 15px;
+    color: white;
+    font-weight: 700;
+    float: right;
+    font-size: 15px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.close-btn:hover {
+    color: black;
+}
+
+.edit-profile-button a:link {
+    text-decoration: none;
+    color: #e2f5eb;
+}
+
+.edit-profile-button a:visited {
+    text-decoration: none;
+    color: #e2f5eb;
+}
+
+.edit-profile-button a:active {
+    text-decoration: none;
+    color: #e2f5eb;
+}
+
+/* find your food */
+.changePass-button {
+    display: block;
+    margin: auto;
+    text-align: center;
+    background-color: #ccab3d;
+    font-size: 16px;
+    padding: 16px 20px;
+    border-radius: 26px;
+    border: 1 px solid #8ae7e7;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    color: #e2e3f5;
+    box-shadow: 0px 2px 2px #39a742;
+    cursor: pointer;
+    transition: transform .2s;
+
+}
+
+.changePass-button:active, .changePass-button:focus, .changePass-button:hover {
+    border-color: #8ae7e7;
+    outline: none;
+    transform: scale(1.1);
+}
+
+.changePass-button a:link {
+    text-decoration: none;
+    color: #e2f5eb;
+}
+
+.changePass-button a:visited {
+    text-decoration: none;
+    color: #e2f5eb;
+}
+
+.changePass-button a:active {
+    text-decoration: none;
+    color: #e2f5eb;
+}

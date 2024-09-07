@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background-color: #e2f5eb;
+    font-family: "Abel"; 
+}
+
+.footer {
+    /* position: fixed; */
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #e2f5eb;
+    color: black;
+    text-align: center;
+}
+
+/* input fields */
+.insert-destination-input {
+    border: none;
+    border-bottom: 2px solid #c3c555;
+    width: 100%;
+    padding: 15px;
+    padding: 24px;
+    font-weight: bold;
+    transition: .2s;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: none;
+    font-family: "Abel";
+    color: black;
+}
+
+.insert-destination-input:focus, .insert-destination-input:active, .insert-destination-input:hover {
+    background-color: white;
+    outline: none;
+    color: black;
+    border-bottom-color: #a3a137;
+}
+
+.insert-destination-modal-content hr {
+    border: 1px solid #a3a137;
+    margin-bottom: 25px;
+}
+
+/* style for buttons */
+.insert-destination-submit {
+    background-color: #a3a137;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 25%;
+    opacity: 0.9;
+}
+
+.insert-destination-submit:hover {
+    opacity: 3;
+}
+
+.insert-destination-submit {
+    float: left;
+    width: 100%;
+}
+
+.main-inteats {
+    position: relative;
+}
+
+.main-inteats span {
+    position: relative;
+    display: inline-block;
+    font-size: 40px;
+    font-weight: 700;
+    color: #c3c555;
+    text-transform: uppercase;
+    animation: flip 2s infinite;
+    animation-delay: calc(.2s * var(--i))
+}
+
+@keyframes flip {
+    0%, 80% {
+        transform: rotateY(360deg)
+    }
+}
+
+/* add padding the container elements */
+.insert-destination-container-form {
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* modal content box */
+.modal-content-insert-destination {
+    z-index: 1;
+    background-color: #c3c555;
+    /* 15% from the top and centered */
+    margin: 5px auto;
+    border: 1px solid #7e7c23;
+    width: 100%;
+    border-radius: 8px;
+}
+
+.main-img {
+    border-radius: 400px;
+    width: 200px;
+    height: 200px;
+}
+
+/* clear the floats */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* change the styles for the cancel button and the insert-destination button on extra small screens */
+@media screen and (max-width: 300px) {
+    .cancel-btn, .insert-destination-submit {
+        width: 100%;
+    }
+}
+
+/* for the destination-insert */
+@media screen and (max-width: 300px) {
+    .cancel-btn, .destination-insert-submit {
+        width: 100%;
+    }
+}
+
+/* background of the modal */
+.modal-insert-destination {
+    /* position: fixed; */
+    z-index: 1;
+    /* left: 25%; */
+    /* top: 5%; */
+    width: 80%;
+    height: 70%;
+    border-radius: 10px;
+    margin: auto;
+    /* scroll enabled if needed */
+    overflow: auto;
+    background-color: #a3a137;
+    padding-top: 60px;
+}
+
+#button-icon-insert-destination {
+    color: #5e5c10;
+    font-size: 25px;
+}
+
+.carousel-img {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 15vh;
+}
+
+/* to have the styling for the image classes to work, you must first call the further outside
+container and then the actual class of the images */
+.carousel-img .carousel-image {
+    margin: 0 auto;
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    display: flex;
+}
+
+.carousel-img-slider {
+    height: 110px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: 80%;
+}
+
+.carousel-img-slider .carousel-img-slide-track {
+    animation: scroll 200s linear infinite;
+    display: flex;
+    animation-iteration-count: infinite; /* ensures an infinite loop */
+}
+
+.carousel-img-slider .img {
+    height: 80px;
+    width: 80px;
+    margin-right: 10px;
+}
+
+@-webkit-keyframes scroll {
+    0% {
+        transform: translateX(0);
+    } 100% {
+        transform: translateX(calc(-250px * 7));
+    }
+}
+
+@keyframes scoll {
+    0% {
+        transform: translateX(0);
+    } 100% {
+        transform: translateX(calc(-250px * 7));
+    } 100.1% { /* adds a kayeframe immediately after the last image */
+        transform: translateX(0); /* resets the translation back to the initial position */
+    }
+}
+
+.new-destination-title {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.insert-destination-submit {
+    background-color: #5e5c10;
+}
+
+.text-danger {
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.text-success {
+    padding: 20px;
+    background-color: #63b354;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+/* close button */
+.close-btn {
+    margin-left: 15px;
+    color: white;
+    font-weight: 700;
+    float: right;
+    font-size: 15px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.close-btn:hover {
+    color: black;
+}
+
+.destination-profile {
+    padding-left: 10px;
+    padding-right: 10px;
+}

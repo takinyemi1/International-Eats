@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    background-color: #e2f5eb;
+    font-family: "Abel"; 
+}
+
+.logo-container {
+    /* puts things in the same row */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-container img {
+    /* space between the image and the text */
+    margin-right: 10px;
+}
+
+.footer {
+    /* position: fixed; */
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #e2f5eb;
+    color: black;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #1dad65;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+nav li {
+    float: left;
+    border-right: 1px solid #bbb;
+}
+
+nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav li:last-child {
+    border-right: none;
+}
+
+/* change the color to hover */
+nav li a:hover {
+    background-color: #c99cc9;
+}
+
+nav .active {
+    background-color: rgb(30, 88, 35);
+}
+
+.nav-right {
+    float: right;
+    /* margin-left: auto; */
+}
+
+.main-words {
+    margin: auto;
+    color: black;
+    font: 700 normal 2.5em "Abel";
+    text-shadow: 5px 2px #3b6a99, 2px 4px #3b6a99, 2px 4px #3b6a99;
+}
+
+.carousel-img {
+    align-items: baseline;
+    display: flex;
+    justify-content: center;
+    height: 80vh;
+}
+
+.carousel-img .carousel-image {
+    margin: 0 auto;
+    width: 300px;
+    height: 250px;
+    border-radius: 10px;
+    display: flex;
+}
+
+.carousel-img-slider {
+    height: 250px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: 80%;
+}
+
+.carousel-img-slider .carousel-img-slide-track {
+    animation: scroll 200s linear infinite;
+    display: flex;
+}
+
+.carousel-img-slider .img {
+    height: 80px;
+    width: 80px;
+    margin-right: 270px;
+}
+
+@-webkit-keyframes scroll {
+    0% {
+        transform: translateX(0);
+    } 100% {
+        transform: translateX(calc(-250px * 7));
+    }
+}
+
+@keyframes scoll {
+    0% {
+        transform: translateX(0);
+    } 100% {
+        transform: translateX(calc(-250px * 7));
+    }
+}

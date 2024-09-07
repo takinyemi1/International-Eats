@@ -1,0 +1,474 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background-color: #e2f5eb;
+    font-family: "Abel"; 
+}
+
+.footer {
+    /* position: fixed; */
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #e2f5eb;
+    color: black;
+    text-align: center;
+}
+
+.signup-modal-content .container-img {
+    width: 65px;
+    text-align: center;
+    border-radius: 50px;
+}
+
+/* login */
+.login-modal-content .container-img {
+    width: 65px;
+    text-align: center;
+    border-radius: 50px;
+}
+
+/* input fields */
+.signup-input {
+    border: none;
+    border-bottom: 2px solid #93e089;
+    width: 100%;
+    padding: 15px;
+    padding: 24px;
+    font-weight: bold;
+    transition: .2s;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: none;
+    font-family: "Abel";
+    color: black;
+}
+
+/* login */
+.login-input {
+    border: none;
+    border-bottom: 2px solid #cde089;
+    width: 100%;
+    padding: 15px;
+    padding: 24px;
+    font-weight: bold;
+    transition: .2s;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: none;
+    font-family: "Abel";
+    color: black;
+}
+
+.signup-input:focus, .signup-input:active, .signup-input:hover {
+    background-color: white;
+    outline: none;
+    color: black;
+    border-bottom-color: #3f7744;
+}
+
+/* login */
+.login-input:focus, .login-input:active, .login-input:hover {
+    background-color: white;
+    outline: none;
+    color: black;
+    border-bottom: #748f29;
+}
+
+.new-traveler-button {
+    text-align: center;
+    background-color: #4678c4;
+    font-size: 16px;
+    right: 50%;
+    margin-top: 30px;
+    /* centers the button */
+    margin: auto;
+    padding: 16px 20px;
+    border-radius: 26px;
+    border: 1px solid #d4d3e8;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    color: #93e089;
+    box-shadow: 0px 2px 2px #93e089;
+    cursor: pointer;
+    transition: transform .2s;
+}
+
+.new-traveler-button a:link {
+    text-decoration: none;
+    color: #93e089;
+    font-weight: 700;
+}
+
+.new-traveler-button a:visited {
+    text-decoration: none;
+    color: #93e089;
+    font-weight: 700;
+}
+
+.new-traveler-button a:active {
+    text-decoration: none;
+    color: #93e089;
+}
+
+/* login button */
+.experienced-traveler-button {
+    text-align: center;
+    background-color: #c3d45d;
+    font-size: 16px;
+    right: 50%;
+    margin-top: 30px;
+    /* centers the button */
+    margin: auto;
+    padding: 16px 20px;
+    border-radius: 26px;
+    border: 1px solid #9f9dc2;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    color: white;
+    box-shadow: 0px 2px 2px rgb(170, 212, 169);
+    cursor: pointer;
+    transition: transform .2s;
+}
+
+.experienced-traveler-button a:link {
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+}
+
+.experienced-traveler-button a:visited {
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+}
+
+.experienced-traveler-button a:active {
+    text-decoration: none;
+    color: white;
+}
+
+.new-traveler-button:active, .new-traveler-button:focus, .new-traveler-button:hover {
+    border-color: white;
+    outline: none;
+    transform: scale(1.5);
+}
+
+/* login */
+.experienced-traveler-button:active, .experienced-traveler-button:focus, .experienced-traveler-button:hover {
+    border-color: #4dbdbd;
+    outline: none;
+    transform: scale(1.5);
+}
+
+.signup-modal-content hr {
+    border: 1px solid #7fbfe4;
+    margin-bottom: 25px;
+}
+
+/* login modal content */
+.login-modal-content hr {
+    border: 1px solid #3d771c;
+    margin-bottom: 25px;
+}
+
+/* style for buttons */
+.cancel-btn, .signup-submit {
+    background-color: #97a09c;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+/* style for login buttons */
+.cancel-btn, .login-submit {
+    background-color: #97a09c;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+.cancel-btn:hover, .signup-submit:hover {
+    opacity: 1;
+}
+
+.cancel-btn:hover, .login-submit:hover {
+    opacity: 1;
+}
+
+/* cancel button style */
+.cancel-btn, .signup-submit {
+    float: left;
+    width: 50%;
+}
+
+/* login cancel and login button */
+.cancel-btn, .login-submit {
+    float: left;
+    width: 50%;
+}
+
+.cancel-btn {
+    background-color: red;
+}
+
+.main-inteats {
+    position: relative;
+}
+
+.main-inteats span {
+    position: relative;
+    display: inline-block;
+    font-size: 40px;
+    font-weight: 700;
+    color: #3f7744;
+    text-transform: uppercase;
+    animation: flip 2s infinite;
+    animation-delay: calc(.2s * var(--i))
+}
+
+@keyframes flip {
+    0%, 80% {
+        transform: rotateY(360deg)
+    }
+}
+
+/* add padding the container elements */
+.signup-container-form {
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* for login container */
+.login-container-form {
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* modal content box */
+.modal-content-signup {
+    z-index: 1;
+    background-color: #b1e1f0fa;
+    /* 15% from the top and centered */
+    margin: 5px auto;
+    border: 1px solid #97dce6;
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* modal content for the login */
+.modal-content-login {
+    z-index: 1;
+    background-color: #99d178fa;
+    /* 15% from the top and centered */
+    margin: 5px auto;
+    border: 1px solid #7bb46d;
+    width: 100%;
+    border-radius: 8px;
+}
+
+.main-img {
+    border-radius: 400px;
+    width: 400px;
+    height: 400px;
+}
+
+/* clear the floats */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* change the styles for the cancel button and the signup button on extra small screens */
+@media screen and (max-width: 300px) {
+    .cancel-btn, .signup-submit {
+        width: 100%;
+    }
+}
+
+/* for the login */
+@media screen and (max-width: 300px) {
+    .cancel-btn, .login-submit {
+        width: 100%;
+    }
+}
+
+/* background of the modal */
+.modal-signup {
+    /* makes it hidden by default */
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 25%;
+    top: 5%;
+    width: 50%;
+    height: 70%;
+    border-radius: 10px;
+    /* scroll enabled if needed */
+    overflow: auto;
+    background-color: #7fbfe4;
+    padding-top: 60px;
+}
+
+/* background of the login */
+.modal-login {
+    /* makes it hidden by default */
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 25%;
+    top: 5%;
+    width: 50%;
+    height: 70%;
+    border-radius: 10px;
+    /* scroll enabled if needed */
+    overflow: auto;
+    background-color: #3d771c;
+    padding-top: 60px;
+}
+
+/* close button */
+.close {
+    /* position it in the top right corner outside of the modal */
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: black;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+/* close button on hover */
+.close:hover, .close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* zoom animation on the modal */
+.login-modal-content animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s;
+}
+
+#button-icon-signup {
+    color: #3f7744;
+    font-size: 25px;
+}
+
+#button-icon-login {
+    color: #4678c4;
+    font-size: 25px;
+}
+
+.carousel-img {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 15vh;
+}
+
+/* to have the styling for the image classes to work, you must first call the further outside
+container and then the actual class of the images */
+.carousel-img .carousel-image {
+    margin: 0 auto;
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    display: flex;
+}
+
+.carousel-img-slider {
+    height: 110px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: 80%;
+}
+
+.carousel-img-slider .carousel-img-slide-track {
+    animation: scroll 200s linear infinite;
+    display: flex;
+}
+
+.carousel-img-slider .img {
+    height: 80px;
+    width: 80px;
+    margin-right: 10px;
+}
+
+@-webkit-keyframes scroll {
+    0% {
+        transform: translateX(0);
+    } 100% {
+        transform: translateX(calc(-250px * 7));
+    }
+}
+
+@keyframes scoll {
+    0% {
+        transform: translateX(0);
+    } 100% {
+        transform: translateX(calc(-250px * 7));
+    }
+}
+
+.forgot-password {
+    color: #4678c4;
+    text-align: right;
+    font-weight: 700;
+}
+
+.forgot-password:hover {
+    color: #4678c4;
+    font-weight: 700;
+}
+
+.forgot-password a:link {
+    text-decoration: none;
+    color: #4678c4;
+    font-weight: 700;
+}
+
+.forgot-password a:visited {
+    text-decoration: none;
+    color: #4678c4;
+    font-weight: 700;
+}
+
+.forgot-password a:active {
+    text-decoration: none;
+    color: #000;
+}
+
+
+.text-danger {
+    font-family: "Abel";
+    color: red;
+}
